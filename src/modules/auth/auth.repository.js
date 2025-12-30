@@ -11,4 +11,10 @@ export default class AuthRepository {
               const user = await User.findById(id);
               return user;
        });
+
+       getUserByEmail = catchAsync(async (email, select = null) => {
+              const query = User.findOne({ email });
+              if (select) query.select(select);
+              return await query;
+       });
 }

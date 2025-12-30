@@ -64,7 +64,6 @@ const userSchema = new mongoose.Schema({
                      },
 
                      address: String,
-                     destination: String,
                      tag: String,
               },
        ],
